@@ -1,0 +1,1 @@
+이 폴더에 프로젝트 2 의 실제 시공 사진을 넣고 assets/js/projects.js 에 경로를 등록하세요. (예: 01.jpg, before.jpg, after.jpg)

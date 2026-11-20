@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 정식 도메인 연결 후 loc 주소를 실제 도메인으로 바꾸세요 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.your-domain.co.kr/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+</urlset>
