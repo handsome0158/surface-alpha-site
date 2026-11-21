@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# 정식 도메인 연결 후 주소를 바꾸세요
-# Sitemap: https://www.your-domain.co.kr/sitemap.xml
+Sitemap: https://handsome0158.github.io/surface-alpha-site/sitemap.xml

@@ -181,7 +181,7 @@
             '<div class="project-story-heading"><span class="project-story-no">' + no + '</span><div>' +
               '<h3>' + esc(phase.title) + '</h3><p>' + esc(phase.description) + '</p>' +
             '</div></div>' +
-            '<div class="project-story-gallery">' + (phase.photos || []).map(function (ph) {
+            '<div class="project-story-gallery' + (p.naturalImages ? ' project-story-gallery-natural' : '') + '">' + (phase.photos || []).map(function (ph) {
               return '<figure><img src="' + esc(ph.src) + '" alt="' + esc(ph.caption || phase.title) + '" loading="lazy" decoding="async">' +
                 (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
             }).join('') + '</div>' +
