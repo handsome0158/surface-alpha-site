@@ -12,22 +12,68 @@ window.SA_PROJECTS = [
   {
     id: 'project-1',
     category: 'Elevator Surface Protection',
-    title: '기업 사옥 승강기 표면보호',
-    summary: '기업 사옥 승강기 4대의 내부 스테인리스 및 마감재 보호필름 시공',
-    material: '스테인리스, 승강기 내부 마감재',
-    siteType: '기업 사옥 (업무시설)',
-    scale: '승강기 4대',
-    challenge: '승강기 내부는 이용자 접촉과 물품 이동이 잦아 스테인리스 패널에 긁힘과 오염이 생기기 쉬운 공간입니다. 여러 호기를 같은 품질로 마감하는 것이 중요했습니다.',
-    solution: '승강기 내부 스테인리스 및 마감재의 표면 상태를 확인한 뒤 보호필름을 시공했습니다. 기업 협력 프로젝트로 진행되었습니다.',
+    title: '과천 게임회사 사옥 승강기 표면보호',
+    summary: '최초 1대 샘플 시공 후 품질 만족으로 10대 추가 시공',
+    highlight: '한 대의 시공 품질이, 열 대의 추가 시공으로 이어졌습니다.',
+    material: '스테인리스 승강기 내부 마감재',
+    siteType: '경기도 과천시 기업 사옥',
+    scale: '총 11대 (공용 3대 · 직원용 8대)',
+    challenge: '이용과 이동이 잦은 사옥 승강기의 스테인리스 내부 마감재를 보호하면서, 여러 대에 걸쳐 균일한 시공 품질을 확보하는 것이 중요했습니다.',
+    solution: '최초 1대에 보호필름을 샘플 시공해 품질을 확인받은 뒤, 공용 승강기 2대와 직원용 승강기 8대에 추가 시공했습니다.',
     process: [
-      '호기별 내부 마감재 구성과 표면 상태 확인',
-      '표면 세정 및 이물 제거',
-      '패널별 재단과 보호필름 부착',
-      '모서리·이음부 마감과 호기별 품질 확인'
+      '승강기 1대에 보호필름 샘플 시공',
+      '샘플 시공 품질 확인 후 추가 시공 범위 확정',
+      '공용 승강기 2대와 직원용 승강기 8대 추가 시공',
+      '패널 모서리와 조작부 주변 정밀 마감 및 최종 확인'
     ],
-    result: '승강기 4대 내부 스테인리스 및 마감재에 보호필름 시공을 완료했습니다.',
+    result: '최초 샘플 승강기 1대를 포함해 총 11대의 스테인리스 내부 마감재 표면보호 시공을 완료했습니다.',
     client: '',          // 공개 승인된 경우에만 입력
-    photos: [],          // 예: [{ src: 'assets/images/projects/project-1/01.jpg', caption: '시공 후 내부 전경' }]
+    photos: [
+      { src: 'assets/images/projects/project-1/11-completed-elevator-interior.jpg', caption: '완성된 승강기 내부' }
+    ],
+    story: [
+      {
+        title: '프로젝트 소개',
+        description: '경기도 과천시 기업 사옥의 스테인리스 승강기 내부 마감재에 표면보호필름을 시공했습니다. 샘플 시공으로 확인한 품질이 추가 10대 시공으로 이어져 총 11대를 마무리했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-1/01-overview-elevator-bank.jpg', caption: '사옥 승강기 공용부 전경' },
+          { src: 'assets/images/projects/project-1/02-overview-elevator-corridor.jpg', caption: '승강기 주변 내부 전경' }
+        ]
+      },
+      {
+        title: '최초 샘플 시공',
+        description: '먼저 승강기 1대에 필름을 적용해 표면 상태와 마감 품질을 확인했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-1/03-sample-film-application.jpg', caption: '샘플 승강기 패널 필름 시공' },
+          { src: 'assets/images/projects/project-1/04-sample-panel-application.jpg', caption: '패널 면에 필름을 정밀 부착' }
+        ]
+      },
+      {
+        title: '추가 10대 시공',
+        description: '샘플 시공 품질에 대한 만족을 바탕으로 공용 승강기 2대와 직원용 승강기 8대에 추가 시공을 진행했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-1/05-additional-work-panel.jpg', caption: '추가 호기 패널 시공' },
+          { src: 'assets/images/projects/project-1/06-additional-work-elevator.jpg', caption: '승강기 내부 필름 부착 작업' }
+        ]
+      },
+      {
+        title: '정밀 마감 작업',
+        description: '조작부와 패널 가장자리 등 세밀한 부분까지 표면을 정리하고 마감 상태를 점검했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-1/07-edge-surface-preparation.jpg', caption: '패널 모서리와 표면 정리' },
+          { src: 'assets/images/projects/project-1/08-precision-control-panel.jpg', caption: '조작부 주변 정밀 작업' },
+          { src: 'assets/images/projects/project-1/09-precision-panel-finish.jpg', caption: '패널 하단 마감 확인' }
+        ]
+      },
+      {
+        title: '최종 완성 결과',
+        description: '샘플 1대와 추가 10대, 총 11대의 승강기 내부 표면보호 시공을 마무리했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-1/10-completed-elevator-bank.jpg', caption: '시공 완료된 승강기 공용부' },
+          { src: 'assets/images/projects/project-1/11-completed-elevator-interior.jpg', caption: '시공 완료된 승강기 내부' }
+        ]
+      }
+    ],
     beforeAfter: { before: '', after: '' }
   },
   {

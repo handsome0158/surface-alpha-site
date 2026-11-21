@@ -122,6 +122,7 @@
           '<p class="project-cat"><span>CASE ' + no + '</span>' + esc(p.category) + '</p>' +
           '<h3>' + esc(p.title) + '</h3>' +
           '<p class="project-summary">' + esc(p.summary) + '</p>' +
+          (p.highlight ? '<p class="project-highlight">' + esc(p.highlight) + '</p>' : '') +
           '<dl class="project-meta">' +
             '<div><dt>소재</dt><dd>' + esc(p.material) + '</dd></div>' +
             '<div><dt>장소</dt><dd>' + esc(p.siteType) + '</dd></div>' +
@@ -168,21 +169,42 @@
         '<figcaption>슬라이더를 움직여 시공 전후를 비교해 보세요.</figcaption></figure>';
     }
 
-    html += '<div class="modal-body">' +
-      '<section><h3>현장 과제</h3><p>' + esc(p.challenge) + '</p></section>' +
-      '<section><h3>적용 솔루션</h3><p>' + esc(p.solution) + '</p></section>' +
-      '<section><h3>시공 과정</h3><ol class="modal-steps">' +
-        (p.process || []).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></section>' +
-      '<section><h3>완료 결과</h3><p>' + esc(p.result) + '</p></section>' +
-      '</div>';
+    if (p.story && p.story.length) {
+      html += '<div class="project-story">' +
+        '<div class="project-story-intro">' +
+          '<p class="project-story-kicker">PROJECT SUMMARY · ' + esc(p.scale) + '</p>' +
+          '<p class="project-story-quote">' + esc(p.highlight || p.summary) + '</p>' +
+        '</div>' +
+        p.story.map(function (phase, i) {
+          var no = String(i + 1).padStart(2, '0');
+          return '<section class="project-story-phase">' +
+            '<div class="project-story-heading"><span class="project-story-no">' + no + '</span><div>' +
+              '<h3>' + esc(phase.title) + '</h3><p>' + esc(phase.description) + '</p>' +
+            '</div></div>' +
+            '<div class="project-story-gallery">' + (phase.photos || []).map(function (ph) {
+              return '<figure><img src="' + esc(ph.src) + '" alt="' + esc(ph.caption || phase.title) + '" loading="lazy" decoding="async">' +
+                (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
+            }).join('') + '</div>' +
+          '</section>';
+        }).join('') +
+        '</div>';
+    } else {
+      html += '<div class="modal-body">' +
+        '<section><h3>현장 과제</h3><p>' + esc(p.challenge) + '</p></section>' +
+        '<section><h3>적용 솔루션</h3><p>' + esc(p.solution) + '</p></section>' +
+        '<section><h3>시공 과정</h3><ol class="modal-steps">' +
+          (p.process || []).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></section>' +
+        '<section><h3>완료 결과</h3><p>' + esc(p.result) + '</p></section>' +
+        '</div>';
 
-    if (photos.length) {
-      html += '<div class="modal-gallery">' + photos.map(function (ph) {
-        return '<figure><img src="' + esc(ph.src) + '" alt="' + esc(ph.caption || p.title) + '" loading="lazy" decoding="async">' +
-          (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
-      }).join('') + '</div>';
-    } else if (!hasBA) {
-      html += '<p class="modal-photo-note">현장 사진은 정리 후 게시할 예정입니다. 시공 사진이 필요하시면 견적문의 시 요청해 주세요.</p>';
+      if (photos.length) {
+        html += '<div class="modal-gallery">' + photos.map(function (ph) {
+          return '<figure><img src="' + esc(ph.src) + '" alt="' + esc(ph.caption || p.title) + '" loading="lazy" decoding="async">' +
+            (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
+        }).join('') + '</div>';
+      } else if (!hasBA) {
+        html += '<p class="modal-photo-note">현장 사진은 정리 후 게시할 예정입니다. 시공 사진이 필요하시면 견적문의 시 요청해 주세요.</p>';
+      }
     }
 
     html += '<div class="modal-cta"><p>비슷한 현장의 시공을 검토 중이신가요?</p>' +
