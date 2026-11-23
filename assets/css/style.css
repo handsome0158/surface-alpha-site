@@ -262,10 +262,11 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate
 /* ---------- Projects ---------- */
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 32px); align-items: stretch; }
 .project-card { display: flex; flex-direction: column; border: 1px solid var(--line); background: #fff; min-width: 0; height: 100%; }
-.project-media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-alt); }
+.project-media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-alt); }
 .project-cover { width: 100%; height: 100%; object-fit: cover; }
 .project-cover-mosaic { width: 100%; height: 100%; display: grid; grid-template: repeat(2, minmax(0, 1fr)) / repeat(2, minmax(0, 1fr)); gap: 2px; }
 .project-cover-mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.project-cover-note { position: absolute; right: 8px; bottom: 8px; z-index: 1; max-width: calc(100% - 16px); padding: 6px 9px; background: rgba(8,17,30,.88); color: #fff; font-size: 12px; line-height: 1.4; }
 .photo-pending {
   display: flex; flex-direction: column; justify-content: space-between; padding: 22px 24px;
   background:

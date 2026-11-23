@@ -103,11 +103,14 @@
   /* ---------- 프로젝트 ---------- */
   function coverHTML(p, cls) {
     if (p.coverPhotos && p.coverPhotos.length) {
-      return '<div class="' + cls + '-mosaic" role="img" aria-label="' + esc(p.title) + ' 프로젝트 현장 사진">' +
+      var photoNote = p.coverPhotoNote
+        ? '<span class="project-cover-note">' + esc(p.coverPhotoNote) + '</span>'
+        : '';
+      return '<div class="' + cls + '-mosaic" role="img" aria-label="' + esc(p.title) + ' 참고 이미지">' +
         p.coverPhotos.map(function (photo) {
           return '<img src="' + esc(photo.src) + '" alt="" loading="lazy" decoding="async">';
         }).join('') +
-        '</div>';
+        '</div>' + photoNote;
     }
     var src = (p.photos && p.photos[0] && p.photos[0].src) || p.beforeAfter && p.beforeAfter.after;
     if (src) {

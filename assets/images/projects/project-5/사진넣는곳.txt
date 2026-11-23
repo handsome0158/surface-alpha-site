@@ -1,7 +1,7 @@
 풍문고등학교 CASE 05 실제 시공 사진
 
-현재는 사진을 게시하지 않습니다. 임시 이미지나 다른 현장 사진을 사용하지 마세요.
-실제 현장 원본이 준비되면 아래 파일명으로 추가하고 assets/js/projects.js의 CASE 05 story 항목에 연결합니다.
+현재 JPG 7장은 제공된 사진 모음에서 발췌한 저해상도 참고 이미지입니다. 실제 시공 사진 원본과 혼동되지 않도록 사이트에서도 참고 이미지로 표시합니다.
+실제 현장 원본이 준비되면 같은 촬영 내용의 원본으로 교체하고 assets/js/projects.js의 CASE 05 story 항목을 갱신합니다.
 
 - 01-school-exterior.jpg
 - 02-elevator-before.jpg

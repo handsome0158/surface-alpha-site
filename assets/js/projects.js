@@ -326,6 +326,13 @@ window.SA_PROJECTS = [
       ['SCOPE', '2 Elevators'],
       ['PROJECT HIGHLIGHT', 'Additional Order After Initial Installation']
     ],
+    coverPhotos: [
+      { src: 'assets/images/projects/project-5/02-elevator-before.jpg' },
+      { src: 'assets/images/projects/project-5/04-film-application.jpg' },
+      { src: 'assets/images/projects/project-5/06-completed-elevator.jpg' },
+      { src: 'assets/images/projects/project-5/07-final-result.jpg' }
+    ],
+    coverPhotoNote: '참고 이미지 · 원본 사진은 추후 추가',
     overviewTitle: '많은 학생이 이용하는 공간, 표면보호의 중요성',
     overview: '서울특별시 강남구 풍문고등학교에서 진행한 교육시설 승강기 표면보호 프로젝트입니다. 학생과 교직원이 반복적으로 이용하는 공용 승강기 총 2대가 대상이었습니다.',
     challenge: '학교 승강기는 학생과 교직원 등 많은 이용자가 반복적으로 사용하는 공용시설입니다. 잦은 이용과 접촉으로 스테인리스 표면에 스크래치와 사용 흔적이 발생할 수 있어, 기존 마감재의 외관을 보호할 대책이 필요했습니다.',
@@ -337,15 +344,38 @@ window.SA_PROJECTS = [
       '추가 승강기 1대 시공을 포함해 총 2대 완료'
     ],
     result: '최초 1대 시공 이후 이어진 추가 의뢰로 총 2대의 승강기 보호필름 시공을 진행했습니다. 추가 의뢰 사례이며, 공식 추천이나 보증을 의미하지 않습니다.',
-    photoNote: '풍문고등학교 프로젝트의 실제 시공 사진 원본은 준비 중입니다. 사진이 준비될 때까지 상세 화면에 사진을 게시하지 않습니다.',
+    overviewPhotos: [
+      { src: 'assets/images/projects/project-5/01-school-exterior.jpg', caption: '참고 이미지 · 학교 외관' }
+    ],
+    naturalImages: true,
+    compactGallery: true,
+    photoNote: '현재 이미지는 제공된 사진 모음에서 발췌한 저해상도 참고 이미지이며, 원본 사진이 아닙니다. 실제 시공 사진 원본은 확보 후 추가할 예정입니다.',
     publicationNotes: [
       'CARAND FILM 사업 운영 당시 수행한 시공 경험이며, SURFACE ALPHA 브랜드로 신규 계약한 실적은 아닙니다.'
     ],
     story: [
       { description: '', photos: [] },
-      { title: '시공 전 승강기 및 소재 상태', photos: [] },
-      { title: '보호필름 부착 및 세부 마감', photos: [] },
-      { title: '시공 완료 및 최종 결과', photos: [] }
+      {
+        title: '시공 전 승강기 및 소재 상태',
+        photos: [
+          { src: 'assets/images/projects/project-5/02-elevator-before.jpg', caption: '참고 이미지 · 승강기 주변 전경' },
+          { src: 'assets/images/projects/project-5/03-stainless-surface.jpg', caption: '참고 이미지 · 스테인리스 표면' }
+        ]
+      },
+      {
+        title: '보호필름 부착 및 세부 마감',
+        photos: [
+          { src: 'assets/images/projects/project-5/04-film-application.jpg', caption: '참고 이미지 · 필름 부착 작업' },
+          { src: 'assets/images/projects/project-5/05-detail-finish.jpg', caption: '참고 이미지 · 승강기 조작부' }
+        ]
+      },
+      {
+        title: '시공 완료 및 최종 결과',
+        photos: [
+          { src: 'assets/images/projects/project-5/06-completed-elevator.jpg', caption: '참고 이미지 · 승강기 내부' },
+          { src: 'assets/images/projects/project-5/07-final-result.jpg', caption: '참고 이미지 · 승강기 마감' }
+        ]
+      }
     ],
     beforeAfter: { before: '', after: '' }
   }
