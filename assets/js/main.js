@@ -102,13 +102,20 @@
 
   /* ---------- 프로젝트 ---------- */
   function coverHTML(p, cls) {
+    if (p.coverPhotos && p.coverPhotos.length) {
+      return '<div class="' + cls + '-mosaic" role="img" aria-label="' + esc(p.title) + ' 프로젝트 현장 사진">' +
+        p.coverPhotos.map(function (photo) {
+          return '<img src="' + esc(photo.src) + '" alt="" loading="lazy" decoding="async">';
+        }).join('') +
+        '</div>';
+    }
     var src = (p.photos && p.photos[0] && p.photos[0].src) || p.beforeAfter && p.beforeAfter.after;
     if (src) {
       return '<img class="' + cls + '" src="' + esc(src) + '" alt="' + esc(p.title) + ' 현장 사진" loading="lazy" decoding="async">';
     }
-    return '<div class="' + cls + ' photo-pending" role="img" aria-label="현장 사진 준비중">' +
+    return '<div class="' + cls + ' photo-pending" role="img" aria-label="실제 시공 사진 준비 중">' +
       '<span class="pending-mat">' + esc(p.material) + '</span>' +
-      '<span class="pending-label">현장 사진 준비중</span></div>';
+      '<span class="pending-label">실제 시공 사진 준비 중</span></div>';
   }
 
   function renderProjects() {
@@ -139,6 +146,26 @@
   }
 
   var modal, lastFocus;
+  var imageLightbox;
+  function renderStoryGallery(photos, naturalImages) {
+    if (!photos || !photos.length) return '';
+    return '<div class="project-story-gallery' + (naturalImages ? ' project-story-gallery-natural' : '') + '">' +
+      photos.map(function (ph) {
+        var caption = ph.caption || '현장 시공 사진';
+        return '<figure><button class="gallery-photo" type="button" aria-label="사진 확대 보기: ' + esc(caption) + '">' +
+          '<img src="' + esc(ph.src) + '" alt="' + esc(caption) + '" loading="lazy" decoding="async"></button>' +
+          (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
+      }).join('') + '</div>';
+  }
+  function renderStorySection(no, title, description, photos, naturalImages, content) {
+    return '<section class="project-story-phase">' +
+      '<div class="project-story-heading"><span class="project-story-no">' + no + '</span><div>' +
+        '<h3>' + esc(title) + '</h3><p>' + esc(description) + '</p>' +
+      '</div></div>' +
+      (content || '') +
+      renderStoryGallery(photos, naturalImages) +
+      '</section>';
+  }
   function openProject(id) {
     var p = PROJECTS.filter(function (x) { return x.id === id; })[0];
     if (!p || !modal) return;
@@ -152,10 +179,15 @@
       '<h2 id="modalTitle">' + esc(p.title) + '</h2>' +
       '<p class="modal-summary">' + esc(p.summary) + '</p></header>';
 
+    var meta = p.projectFacts || [
+      ['시공 대상 소재', p.material],
+      ['시공 장소 유형', p.siteType],
+      ['규모', p.scale]
+    ];
     html += '<dl class="modal-meta">' +
-      '<div><dt>시공 대상 소재</dt><dd>' + esc(p.material) + '</dd></div>' +
-      '<div><dt>시공 장소 유형</dt><dd>' + esc(p.siteType) + '</dd></div>' +
-      '<div><dt>규모</dt><dd>' + esc(p.scale) + '</dd></div>' +
+      meta.map(function (item) {
+        return '<div><dt>' + esc(item[0]) + '</dt><dd>' + esc(item[1]) + '</dd></div>';
+      }).join('') +
       (p.client ? '<div><dt>고객사</dt><dd>' + esc(p.client) + '</dd></div>' : '') +
       '</dl>';
 
@@ -170,24 +202,36 @@
     }
 
     if (p.story && p.story.length) {
-      html += '<div class="project-story">' +
+      var processPhotos = p.story.slice(0, -1).reduce(function (all, phase) {
+        return all.concat((phase.photos || []).filter(function (photo) {
+          return !/exterior|building-exterior/i.test(photo.src);
+        }));
+      }, []);
+      var resultPhase = p.story[p.story.length - 1];
+      var processList = '<ol class="modal-steps">' +
+        (p.process || []).map(function (step) { return '<li>' + esc(step) + '</li>'; }).join('') +
+        '</ol>';
+      html += '<div class="project-story' + (p.compactGallery ? ' project-story-compact-gallery' : '') + '">' +
         '<div class="project-story-intro">' +
-          '<p class="project-story-kicker">PROJECT SUMMARY · ' + esc(p.scale) + '</p>' +
+          '<p class="project-story-kicker">PROJECT SUMMARY</p>' +
           '<p class="project-story-quote">' + esc(p.highlight || p.summary) + '</p>' +
         '</div>' +
-        p.story.map(function (phase, i) {
-          var no = String(i + 1).padStart(2, '0');
-          return '<section class="project-story-phase">' +
-            '<div class="project-story-heading"><span class="project-story-no">' + no + '</span><div>' +
-              '<h3>' + esc(phase.title) + '</h3><p>' + esc(phase.description) + '</p>' +
-            '</div></div>' +
-            '<div class="project-story-gallery' + (p.naturalImages ? ' project-story-gallery-natural' : '') + '">' + (phase.photos || []).map(function (ph) {
-              return '<figure><img src="' + esc(ph.src) + '" alt="' + esc(ph.caption || phase.title) + '" loading="lazy" decoding="async">' +
-                (ph.caption ? '<figcaption>' + esc(ph.caption) + '</figcaption>' : '') + '</figure>';
-            }).join('') + '</div>' +
-          '</section>';
-        }).join('') +
+        (p.overviewTitle ? '<h3 class="project-overview-title">' + esc(p.overviewTitle) + '</h3>' : '') +
+        renderStorySection('01', '프로젝트 개요', p.overview || p.story[0].description || p.summary, p.overviewPhotos || [], p.naturalImages) +
+        renderStorySection('02', '시공 대상 및 소재', p.material, [], p.naturalImages) +
+        renderStorySection('03', '현장 과제 및 요구사항', p.challenge, [], p.naturalImages) +
+        renderStorySection('04', '적용한 표면보호 솔루션', p.solution, [], p.naturalImages) +
+        renderStorySection('05', '실제 시공 과정', '현장 조건에 맞춰 작업 범위를 확인하고, 단계별 시공과 마감 점검을 진행했습니다.', processPhotos, p.naturalImages, processList) +
+        renderStorySection('06', '최종 결과', p.result, resultPhase.photos || [], p.naturalImages) +
         '</div>';
+      if (p.photoNote) {
+        html += '<p class="modal-photo-note">' + esc(p.photoNote) + '</p>';
+      }
+      if (p.publicationNotes && p.publicationNotes.length) {
+        html += '<aside class="project-publication-notes" role="note">' +
+          p.publicationNotes.map(function (note) { return '<p>' + esc(note) + '</p>'; }).join('') +
+          '</aside>';
+      }
     } else {
       html += '<div class="modal-body">' +
         '<section><h3>현장 과제</h3><p>' + esc(p.challenge) + '</p></section>' +
@@ -241,6 +285,34 @@
     $('#modalClose').addEventListener('click', closeProject);
     modal.addEventListener('click', function (e) { if (e.target === modal) closeProject(); });
     modal.addEventListener('close', function () { document.body.classList.remove('modal-open'); });
+  }
+  function closeImageLightbox() {
+    if (!imageLightbox) return;
+    if (typeof imageLightbox.close === 'function' && imageLightbox.open) imageLightbox.close();
+    else imageLightbox.removeAttribute('open');
+  }
+  function initImageLightbox() {
+    imageLightbox = $('#imageLightbox');
+    if (!imageLightbox) return;
+    var content = $('#modalContent');
+    if (content) content.addEventListener('click', function (e) {
+      var button = e.target.closest('.gallery-photo');
+      if (!button) return;
+      var image = $('img', button);
+      if (!image) return;
+      var lightboxImage = $('#lightboxImage');
+      var caption = $('#lightboxCaption');
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxImage.style.width = Math.min(Math.max(image.naturalWidth, image.clientWidth * 2), 1200) + 'px';
+      caption.textContent = ($('figcaption', button.parentNode) || {}).textContent || image.alt;
+      if (typeof imageLightbox.showModal === 'function') imageLightbox.showModal();
+      else imageLightbox.setAttribute('open', '');
+    });
+    $('#imageLightboxClose').addEventListener('click', closeImageLightbox);
+    imageLightbox.addEventListener('click', function (e) {
+      if (e.target === imageLightbox) closeImageLightbox();
+    });
   }
 
   /* ---------- 견적문의 ---------- */
@@ -444,6 +516,7 @@
     initHeader();
     renderProjects();
     initModal();
+    initImageLightbox();
     initForm();
     var m = /^#(project-\d+)$/.exec(location.hash);
     if (m) openProject(m[1]);

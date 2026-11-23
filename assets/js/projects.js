@@ -12,7 +12,7 @@ window.SA_PROJECTS = [
   {
     id: 'project-1',
     category: 'Elevator Surface Protection',
-    title: '과천 게임회사 사옥 승강기 표면보호',
+    title: '경기 기업 사옥 승강기 표면보호',
     summary: '최초 1대 샘플 시공 후 품질 만족으로 10대 추가 시공',
     highlight: '한 대의 시공 품질이, 열 대의 추가 시공으로 이어졌습니다.',
     material: '스테인리스 승강기 내부 마감재',
@@ -78,22 +78,22 @@ window.SA_PROJECTS = [
   },
   {
     id: 'project-2',
-    category: 'H엘리베이터 협업 · 승강기 표면보호',
-    title: '강남 대치동 H백화점 본사 사옥',
+    category: '승강기 협력 시공 · 표면보호',
+    title: '서울 기업 사옥 승강기 표면보호',
     summary: '최초 1대 시공 후 품질을 인정받아 총 4대로 확대 시공한 기업 사옥 프로젝트',
     highlight: '한 대의 시공으로 인정받은 품질, 네 대의 완성으로 증명한 기술력',
     material: '승강기 내부 스테인리스 마감재',
-    siteType: '서울특별시 강남구 대치동',
+    siteType: '서울특별시 기업 업무시설',
     scale: '공용 승강기 1대 · 직원용 승강기 3대',
     challenge: '승강기 내부 스테인리스 표면과 각 마감 구조에 맞춰 보호필름을 시공하고, 조작 버튼과 복잡한 부위를 세밀하게 마감해야 했습니다.',
-    solution: 'H엘리베이터와 협업해 공용 승강기 1대를 먼저 시공한 후, 시공 품질과 완성도를 인정받아 직원용 승강기 3대를 추가 시공했습니다.',
+    solution: '승강기 협력사와 공용 승강기 1대를 먼저 시공한 후, 품질 확인을 거쳐 직원용 승강기 3대를 추가 시공했습니다.',
     process: [
       '주차장에서 로비로 연결되는 공용 승강기 1대 시공',
       '스테인리스 표면과 구조에 맞춰 보호필름 부착',
       '조작 버튼과 복잡한 부위 정밀 핸드커팅',
       '직원용 승강기 3대 추가 시공 및 마감 확인'
     ],
-    result: 'H엘리베이터와 협업해 총 4대의 승강기 표면보호 시공을 완료했습니다. 정밀한 수작업과 세심한 마감으로 발주처와 협업 기업 모두 만족할 수 있는 결과물을 완성했습니다.',
+    result: '승강기 협력사와 함께 총 4대의 승강기 표면보호 시공을 완료했습니다. 정밀한 수작업과 세심한 마감으로 현장 요구에 맞는 결과물을 완성했습니다.',
     client: '',
     naturalImages: true,
     photos: [
@@ -102,10 +102,9 @@ window.SA_PROJECTS = [
     story: [
       {
         title: '프로젝트 소개',
-        description: '서울특별시 강남구 대치동 H백화점 본사 사옥에서 H엘리베이터와 협업해 진행한 승강기 표면보호 프로젝트입니다. 공용 승강기 1대를 먼저 시공하고, 품질과 완성도를 인정받아 직원용 승강기 3대를 추가해 총 4대를 완성했습니다. 시공 속도나 비용 절감보다 소재의 특성과 현장 구조를 고려한 정밀 시공과 세심한 마감에 집중했습니다.',
+        description: '서울특별시 기업 업무시설의 승강기 표면보호 프로젝트입니다. 승강기 협력사와 공용 승강기 1대를 먼저 시공한 뒤 품질 확인을 거쳐 직원용 승강기 3대를 추가해 총 4대를 완성했습니다. 소재의 특성과 현장 구조를 고려한 정밀 시공과 세심한 마감에 집중했습니다.',
         photos: [
-          { src: 'assets/images/projects/project-2/hdept-case02-01-hq-exterior.jpg', caption: 'H백화점 본사 사옥 외관' },
-          { src: 'assets/images/projects/project-2/hdept-case02-02-elevator-lobby.jpg', caption: '본사 사옥 승강기 로비' }
+          { src: 'assets/images/projects/project-2/hdept-case02-02-elevator-lobby.jpg', caption: '현장 승강기 로비' }
         ]
       },
       {
@@ -158,11 +157,11 @@ window.SA_PROJECTS = [
   {
     id: 'project-3',
     category: '신규 교체 승강기 표면보호',
-    title: '강남 대치동 S그룹 계열사 빌딩',
+    title: '서울 기업 업무시설 승강기 표면보호',
     summary: '새롭게 교체한 승강기의 유지관리와 표면 손상 예방을 위해 진행한 정밀 보호필름 시공 프로젝트',
     highlight: '새롭게 교체한 승강기, 그 가치를 오래도록 보호하다.',
     material: '신규 교체 승강기 내부 스테인리스 마감재',
-    siteType: '서울특별시 강남구 대치동',
+    siteType: '서울특별시 기업 업무시설',
     scale: '승강기 총 3대',
     challenge: '승강기를 새롭게 교체한 뒤 내부 스테인리스 마감재의 유지관리와 장기적인 표면 손상 예방이 필요한 상황이었습니다. 기업 시설에 요구되는 시공 품질과 완성도를 확보하는 것도 중요한 과제였습니다.',
     solution: '현장 담당자와 여러 차례 사전 미팅을 진행해 요구사항을 확인한 후, 교체된 승강기 내부 스테인리스 마감재에 보호필름을 정밀하게 시공했습니다.',
@@ -181,9 +180,8 @@ window.SA_PROJECTS = [
     story: [
       {
         title: '프로젝트 소개',
-        description: '서울특별시 강남구 대치동 S그룹 계열사 빌딩의 신규 교체 승강기 표면보호 프로젝트입니다. 현장 담당자와 여러 차례 미팅을 진행해 유지관리와 표면 손상 예방에 대한 요구사항을 확인했습니다.',
+        description: '서울특별시 기업 업무시설의 신규 교체 승강기 표면보호 프로젝트입니다. 현장 담당자와 여러 차례 미팅을 진행해 유지관리와 표면 손상 예방에 대한 요구사항을 확인했습니다.',
         photos: [
-          { src: 'assets/images/projects/project-3/sgroup-case03-01-building-exterior.jpg', caption: 'S그룹 계열사 빌딩 외관' },
           { src: 'assets/images/projects/project-3/sgroup-case03-02-elevator-lobby.jpg', caption: '승강기 로비 전경' }
         ]
       },
@@ -236,11 +234,11 @@ window.SA_PROJECTS = [
   {
     id: 'project-4',
     category: '공동주택 공용시설 보호필름 시공',
-    title: '동탄역 D아파트 승강기 표면보호',
+    title: '경기 공동주택 승강기 표면보호',
     summary: '승강기 교체 이후 깨끗한 시설 환경 유지를 위해 아파트 및 공용시설 승강기 총 11대 시공',
     highlight: '주민들이 함께 사용하는 공간, 새 승강기의 깨끗함을 오래도록.',
     material: '교체된 승강기 내부 마감재',
-    siteType: '경기도 화성시 동탄역 인근',
+    siteType: '경기도 공동주택 시설',
     scale: '아파트 승강기 10대 · 공용시설 승강기 1대',
     challenge: '승강기 교체 이후 깨끗하게 정비된 내부 마감재를 유지하고, 일상적인 사용 과정에서 발생할 수 있는 스크래치와 오염을 예방하고자 했습니다.',
     solution: '공동주택 승강기의 사용 환경과 내부 마감재 특성을 고려해 표면보호필름을 시공하고 세부 부위를 꼼꼼하게 마감했습니다.',
@@ -260,10 +258,8 @@ window.SA_PROJECTS = [
     story: [
       {
         title: '단지 및 현장 전경',
-        description: '경기도 화성시 동탄역 인근 동탄역 D아파트의 승강기 표면보호 프로젝트입니다. 입주민들이 함께 사용하는 승강기와 공용시설의 깨끗한 환경 유지를 위해 시공을 진행했습니다.',
-        photos: [
-          { src: 'assets/images/projects/project-4/dongtan-case04-01-building-exterior.jpg', caption: '동탄역 D아파트 단지 전경' }
-        ]
+        description: '경기도 공동주택의 승강기 표면보호 프로젝트입니다. 입주민들이 함께 사용하는 승강기와 공용시설의 깨끗한 환경 유지를 위해 시공을 진행했습니다.',
+        photos: []
       },
       {
         title: '승강기 교체 후 내부 모습',
@@ -312,6 +308,44 @@ window.SA_PROJECTS = [
           { src: 'assets/images/projects/project-4/dongtan-case04-12-common-facility-view.jpg', caption: '입주민 공동 이용시설 전경' }
         ]
       }
+    ],
+    beforeAfter: { before: '', after: '' }
+  },
+  {
+    id: 'project-5',
+    category: 'POONGMOON HIGH SCHOOL — ELEVATOR SURFACE PROTECTION',
+    title: '풍문고등학교 승강기 표면보호 프로젝트',
+    summary: '최초 1대 시공 후 학교 측 추가 의뢰로 총 2대 시공',
+    highlight: '한 대의 시공으로 시작된 신뢰, 두 번째 의뢰로 이어진 품질.',
+    material: '학교 내 스테인리스 승강기',
+    siteType: '서울특별시 강남구',
+    scale: '승강기 총 2대',
+    projectFacts: [
+      ['PROJECT TYPE', 'Educational Facility'],
+      ['APPLICATION', 'Stainless Steel Elevator'],
+      ['SCOPE', '2 Elevators'],
+      ['PROJECT HIGHLIGHT', 'Additional Order After Initial Installation']
+    ],
+    overviewTitle: '많은 학생이 이용하는 공간, 표면보호의 중요성',
+    overview: '서울특별시 강남구 풍문고등학교에서 진행한 교육시설 승강기 표면보호 프로젝트입니다. 학생과 교직원이 반복적으로 이용하는 공용 승강기 총 2대가 대상이었습니다.',
+    challenge: '학교 승강기는 학생과 교직원 등 많은 이용자가 반복적으로 사용하는 공용시설입니다. 잦은 이용과 접촉으로 스테인리스 표면에 스크래치와 사용 흔적이 발생할 수 있어, 기존 마감재의 외관을 보호할 대책이 필요했습니다.',
+    solution: '이러한 사용 환경을 고려해 보호필름을 적용했습니다. 최초 1대 시공 후 학교 측이 시공 결과와 마감 품질에 만족해 추가 1대의 시공을 의뢰했습니다.',
+    process: [
+      '학교 내 스테인리스 승강기 1대에 보호필름 시공',
+      '최초 시공 결과와 마감 품질에 대한 학교 측 만족 확인',
+      '학교 측 추가 시공 의뢰에 따라 작업 범위 확대',
+      '추가 승강기 1대 시공을 포함해 총 2대 완료'
+    ],
+    result: '최초 1대 시공 이후 이어진 추가 의뢰로 총 2대의 승강기 보호필름 시공을 진행했습니다. 추가 의뢰 사례이며, 공식 추천이나 보증을 의미하지 않습니다.',
+    photoNote: '풍문고등학교 프로젝트의 실제 시공 사진 원본은 준비 중입니다. 사진이 준비될 때까지 상세 화면에 사진을 게시하지 않습니다.',
+    publicationNotes: [
+      'CARAND FILM 사업 운영 당시 수행한 시공 경험이며, SURFACE ALPHA 브랜드로 신규 계약한 실적은 아닙니다.'
+    ],
+    story: [
+      { description: '', photos: [] },
+      { title: '시공 전 승강기 및 소재 상태', photos: [] },
+      { title: '보호필름 부착 및 세부 마감', photos: [] },
+      { title: '시공 완료 및 최종 결과', photos: [] }
     ],
     beforeAfter: { before: '', after: '' }
   }

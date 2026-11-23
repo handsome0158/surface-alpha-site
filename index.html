@@ -121,10 +121,6 @@
             <p class="meaning-note">표면보호 기술 분야에서 고객이 가장 먼저 신뢰하고 선택하는 전문기업을 지향합니다.</p>
           </div>
           </div>
-          <figure class="company-photo">
-            <img src="assets/images/company/company-hq.jpg" alt="대형 백화점 본사 사옥 외관" width="1000" height="2132" loading="lazy" decoding="async">
-            <figcaption>대형 백화점 본사 사옥 시공</figcaption>
-          </figure>
         </div>
 
         <div class="vm-grid">
@@ -264,15 +260,6 @@
           <noscript><p>프로젝트 목록을 보려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
         </div>
 
-        <div class="site-gallery">
-          <h3 class="gallery-title">주요 시공 현장</h3>
-          <div class="gallery-grid">
-            <img class="g-tall" src="assets/images/gallery/site-01.jpg" alt="대형 백화점 본사 사옥 입구" width="1200" height="1758" loading="lazy" decoding="async">
-            <img class="g-wide" src="assets/images/gallery/site-03.jpg" alt="사옥 로비 승강기" width="1600" height="900" loading="lazy" decoding="async">
-            <img src="assets/images/gallery/site-02.jpg" alt="대형 백화점 본사 사옥 측면" width="1200" height="1346" loading="lazy" decoding="async">
-            <img src="assets/images/gallery/site-04.jpg" alt="게임 기업 사옥 외관" width="1120" height="1370" loading="lazy" decoding="async">
-          </div>
-        </div>
       </div>
     </section>
 
@@ -485,6 +472,14 @@
     <div class="modal-inner">
       <button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button>
       <div id="modalContent"></div>
+    </div>
+  </dialog>
+
+  <dialog class="image-lightbox" id="imageLightbox" aria-labelledby="lightboxCaption">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="imageLightboxClose" type="button" aria-label="사진 확대 닫기">×</button>
+      <img id="lightboxImage" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
   </dialog>
 
