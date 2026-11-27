@@ -4,3 +4,5 @@ Thumbs.db
 .vscode/
 node_modules/
 .env*
+/CASE05_SOURCE/
+/CASE06_SOURCE/

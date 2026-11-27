@@ -314,66 +314,126 @@ window.SA_PROJECTS = [
   {
     id: 'project-5',
     category: 'POONGMOON HIGH SCHOOL — ELEVATOR SURFACE PROTECTION',
-    title: '풍문고등학교 승강기 표면보호 프로젝트',
-    summary: '최초 1대 시공 후 학교 측 추가 의뢰로 총 2대 시공',
-    highlight: '한 대의 시공으로 시작된 신뢰, 두 번째 의뢰로 이어진 품질.',
-    material: '학교 내 스테인리스 승강기',
-    siteType: '서울특별시 강남구',
+    title: '강남 풍문고등학교',
+    summary: '교육시설 승강기 2대 표면보호 시공',
+    highlight: '최초 1대 시공 후 만족을 바탕으로 추가 1대 의뢰',
+    material: '승강기 표면보호 필름',
+    siteType: '서울 강남구 교육시설',
     scale: '승강기 총 2대',
     projectFacts: [
       ['PROJECT TYPE', 'Educational Facility'],
-      ['APPLICATION', 'Stainless Steel Elevator'],
+      ['APPLICATION', 'Elevator Surface Protection'],
       ['SCOPE', '2 Elevators'],
-      ['PROJECT HIGHLIGHT', 'Additional Order After Initial Installation']
+      ['LOCATION', 'Gangnam-gu, Seoul']
     ],
-    coverPhotos: [
-      { src: 'assets/images/projects/project-5/02-elevator-before.jpg' },
-      { src: 'assets/images/projects/project-5/04-film-application.jpg' },
-      { src: 'assets/images/projects/project-5/06-completed-elevator.jpg' },
-      { src: 'assets/images/projects/project-5/07-final-result.jpg' }
+    photos: [
+      { src: 'assets/images/projects/project-5/cover-completed-elevator.webp', caption: '시공 완료된 승강기 내부' }
     ],
-    coverPhotoNote: '참고 이미지 · 원본 사진은 추후 추가',
-    overviewTitle: '많은 학생이 이용하는 공간, 표면보호의 중요성',
-    overview: '서울특별시 강남구 풍문고등학교에서 진행한 교육시설 승강기 표면보호 프로젝트입니다. 학생과 교직원이 반복적으로 이용하는 공용 승강기 총 2대가 대상이었습니다.',
-    challenge: '학교 승강기는 학생과 교직원 등 많은 이용자가 반복적으로 사용하는 공용시설입니다. 잦은 이용과 접촉으로 스테인리스 표면에 스크래치와 사용 흔적이 발생할 수 있어, 기존 마감재의 외관을 보호할 대책이 필요했습니다.',
-    solution: '이러한 사용 환경을 고려해 보호필름을 적용했습니다. 최초 1대 시공 후 학교 측이 시공 결과와 마감 품질에 만족해 추가 1대의 시공을 의뢰했습니다.',
+    overviewTitle: '교육시설 승강기 표면보호',
+    overview: '학생과 교직원의 이용이 많은 교육시설의 승강기 표면을 보호하고 쾌적한 시설 환경을 유지하기 위해 진행된 프로젝트입니다.',
+    challenge: '학생과 교직원의 이용이 많은 환경에서 승강기 표면을 보호하고 시설을 쾌적하게 유지하는 것이 과제였습니다.',
+    solution: '최초 1대의 승강기 보호필름 시공 후 작업 결과에 대한 높은 만족도를 바탕으로 추가 1대의 시공을 의뢰받았습니다.',
     process: [
-      '학교 내 스테인리스 승강기 1대에 보호필름 시공',
-      '최초 시공 결과와 마감 품질에 대한 학교 측 만족 확인',
-      '학교 측 추가 시공 의뢰에 따라 작업 범위 확대',
-      '추가 승강기 1대 시공을 포함해 총 2대 완료'
+      '최초 1대 승강기 보호필름 시공',
+      '시공 결과에 대한 높은 만족도를 바탕으로 추가 1대 의뢰',
+      '정밀한 시공과 완성도 높은 마감'
     ],
-    result: '최초 1대 시공 이후 이어진 추가 의뢰로 총 2대의 승강기 보호필름 시공을 진행했습니다. 추가 의뢰 사례이며, 공식 추천이나 보증을 의미하지 않습니다.',
+    result: '정밀한 시공과 완성도 높은 마감을 통해 총 2대의 승강기 표면보호 프로젝트를 성공적으로 마무리했습니다.',
     overviewPhotos: [
-      { src: 'assets/images/projects/project-5/01-school-exterior.jpg', caption: '참고 이미지 · 학교 외관' }
+      { src: 'assets/images/projects/project-5/01-school-context.webp', caption: '교육시설 외부 전경' }
     ],
     naturalImages: true,
     compactGallery: true,
-    photoNote: '현재 이미지는 제공된 사진 모음에서 발췌한 저해상도 참고 이미지이며, 원본 사진이 아닙니다. 실제 시공 사진 원본은 확보 후 추가할 예정입니다.',
     publicationNotes: [
       'CARAND FILM 사업 운영 당시 수행한 시공 경험이며, SURFACE ALPHA 브랜드로 신규 계약한 실적은 아닙니다.'
     ],
     story: [
       { description: '', photos: [] },
       {
-        title: '시공 전 승강기 및 소재 상태',
+        title: '현장과 시공 전 상태',
         photos: [
-          { src: 'assets/images/projects/project-5/02-elevator-before.jpg', caption: '참고 이미지 · 승강기 주변 전경' },
-          { src: 'assets/images/projects/project-5/03-stainless-surface.jpg', caption: '참고 이미지 · 스테인리스 표면' }
+          { src: 'assets/images/projects/project-5/02-elevator-lobby.webp', caption: '시공 대상 승강기 외부 전경' },
+          { src: 'assets/images/projects/project-5/03-before-surface.webp', caption: '시공 전 승강기 표면' }
         ]
       },
       {
-        title: '보호필름 부착 및 세부 마감',
+        title: '보호필름 시공과 정밀 마감',
         photos: [
-          { src: 'assets/images/projects/project-5/04-film-application.jpg', caption: '참고 이미지 · 필름 부착 작업' },
-          { src: 'assets/images/projects/project-5/05-detail-finish.jpg', caption: '참고 이미지 · 승강기 조작부' }
+          { src: 'assets/images/projects/project-5/04-film-application.webp', caption: '승강기 패널 보호필름 부착' },
+          { src: 'assets/images/projects/project-5/05-protective-masking.webp', caption: '시공 중 승강기 내부 보호' },
+          { src: 'assets/images/projects/project-5/06-protection-detail.webp', caption: '손잡이 주변 보호 작업' },
+          { src: 'assets/images/projects/project-5/07-panel-application.webp', caption: '패널 표면 필름 시공' },
+          { src: 'assets/images/projects/project-5/08-control-panel-detail.webp', caption: '조작부 주변 정밀 작업' },
+          { src: 'assets/images/projects/project-5/09-panel-surface-detail.webp', caption: '승강기 패널 표면 상세' },
+          { src: 'assets/images/projects/project-5/10-panel-edge-detail.webp', caption: '패널 접합부 마감 상세' },
+          { src: 'assets/images/projects/project-5/11-film-application-detail.webp', caption: '보호필름 부착 중 표면 상태' }
         ]
       },
       {
-        title: '시공 완료 및 최종 결과',
+        title: '시공 완료',
         photos: [
-          { src: 'assets/images/projects/project-5/06-completed-elevator.jpg', caption: '참고 이미지 · 승강기 내부' },
-          { src: 'assets/images/projects/project-5/07-final-result.jpg', caption: '참고 이미지 · 승강기 마감' }
+          { src: 'assets/images/projects/project-5/12-completed-elevator.webp', caption: '시공 완료된 승강기 내부' }
+        ]
+      }
+    ],
+    beforeAfter: { before: '', after: '' }
+  },
+  {
+    id: 'project-6',
+    category: 'KOREA UNIVERSITY ALUMNI HALL — ELEVATOR SURFACE PROTECTION',
+    title: '고려대학교 교우회관',
+    summary: '교육 및 기관시설 승강기 1대 표면보호 시공',
+    highlight: '까다로운 공사 절차와 제한된 일정에 맞춘 정밀 시공',
+    material: '승강기 표면보호 필름',
+    siteType: '서울 성북구 교육 및 기관시설',
+    scale: '승강기 1대',
+    projectFacts: [
+      ['PROJECT TYPE', 'Educational & Institutional Facility'],
+      ['APPLICATION', 'Elevator Surface Protection'],
+      ['SCOPE', '1 Elevator'],
+      ['LOCATION', 'Seongbuk-gu, Seoul']
+    ],
+    photos: [
+      { src: 'assets/images/projects/project-6/cover-elevator-finish.webp', caption: '완성된 승강기 내부와 조작부' }
+    ],
+    overviewTitle: '교육 및 기관시설 승강기 표면보호',
+    overview: '고려대학교 교우회관 승강기의 쾌적한 이용 환경과 시설물의 장기적인 가치 보존을 위해 진행된 표면보호 프로젝트입니다.',
+    challenge: '시설물의 관리와 보존을 중요하게 생각한 후원자의 요청으로 전문 시공업체를 찾는 과정에서 의뢰받았습니다.',
+    solution: '까다로운 공사 절차와 제한된 시공 일정에 맞춰 체계적으로 현장에 대응하고 정밀 시공을 진행했습니다.',
+    process: [
+      '시설물 관리와 보존을 고려한 시공 요청 대응',
+      '공사 절차와 제한된 시공 일정에 맞춘 현장 대응',
+      '승강기 표면보호 필름 정밀 시공',
+      '완성도 높은 마감 확인'
+    ],
+    result: '까다로운 공사 절차와 제한된 시공 일정에도 체계적인 현장 대응과 정밀한 시공을 통해 높은 만족도로 프로젝트를 마무리했습니다.',
+    overviewPhotos: [
+      { src: 'assets/images/projects/project-6/01-building-context.webp', caption: '교우회관 건물 외부 전경' },
+      { src: 'assets/images/projects/project-6/02-elevator-entry.webp', caption: '승강기 출입구 전경' }
+    ],
+    naturalImages: true,
+    compactGallery: true,
+    publicationNotes: [
+      '기존 카앤필름 홈페이지에 게시된 실제 시공 사진을 사용한 사례이며, SURFACE ALPHA 브랜드로 신규 계약한 실적은 아닙니다.'
+    ],
+    story: [
+      {
+        description: '',
+        photos: [
+          { src: 'assets/images/projects/project-6/03-elevator-protection-preparation.webp', caption: '승강기 내부 보호 작업' },
+          { src: 'assets/images/projects/project-6/04-protected-elevator-entry.webp', caption: '승강기 출입구 보호 작업' },
+          { src: 'assets/images/projects/project-6/05-elevator-interior-panels.webp', caption: '승강기 내부 패널과 손잡이 전경' },
+          { src: 'assets/images/projects/project-6/06-panel-and-handrail-detail.webp', caption: '내부 패널과 손잡이 주변 마감' },
+          { src: 'assets/images/projects/project-6/07-control-panel-finish.webp', caption: '조작부 패널 정밀 마감' },
+          { src: 'assets/images/projects/project-6/08-handrail-joint-detail.webp', caption: '손잡이 연결부 마감 상세' },
+          { src: 'assets/images/projects/project-6/09-panel-surface-detail.webp', caption: '하단 패널과 손잡이 주변 마감' }
+        ]
+      },
+      {
+        title: '시공 완료',
+        description: '승강기 내부 표면보호 시공을 마무리했습니다.',
+        photos: [
+          { src: 'assets/images/projects/project-6/10-completed-interior.webp', caption: '시공 완료된 승강기 내부 전경' }
         ]
       }
     ],
